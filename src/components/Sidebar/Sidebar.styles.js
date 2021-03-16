@@ -5,5 +5,22 @@ export const SidebarContainer = styled.div`
   max-width: 280px;
   min-width: 80px;
   background: #545454;
-  //  background-image: linear-gradient(315deg, #8693ab 0%, #bdd4e7 74%);
+  color: white;
+  font-size: 2rem;
+`;
+
+export const SidebarHeader = styled.h3`
+  text-align: center;
+  padding: 1rem 0;
+`;
+
+export const MenuItemContainer = styled.div`
+  flex-direction: column;
+`;
+
+export const MenuItem = styled.div`
+  padding: 0.8rem;
+  color: #cacaca;
+  background-color: #6b6b6b;
+  font-weight: 500;
 `;
