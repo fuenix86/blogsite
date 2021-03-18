@@ -2,10 +2,10 @@ import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
   width: 20%;
-  max-width: 280px;
   min-width: 80px;
-  background: #545454;
+  max-width: 280px;
   color: white;
+  background: #545454;
   font-size: 2rem;
 `;
 
@@ -19,8 +19,29 @@ export const MenuItemContainer = styled.div`
 `;
 
 export const MenuItem = styled.div`
+  width: ${p => p.selected ? '90%' : 'inherit'};
   padding: 0.8rem;
-  color: #cacaca;
-  background-color: #6b6b6b;
+  padding-left: ${p => p.selected ? '2.3rem' : '0.8rem'};
+  color: ${p => p.selected ? '#ffffff' : '#cacaca'};
+  background: ${p => p.selected ? '#848484' : '#6b6b6b'};
+  font-family: ${(p) => p.font};
   font-weight: 500;
+  justify-content: space-between;  
+  border-radius: ${p => p.selected ? '0px 10px 10px 0px' : 'none'};
+  transition: 0.2s ease all;
+
+  ${p => !p.selected && `
+    &:hover {
+      color: #ffffff;
+      background: #787878;
+    }
+  `}
+`;
+
+export const Text = styled.p`
+  display: inline;
+`;
+
+export const Icon = styled.img`
+  height: 1.5rem;
 `;
