@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import * as s from "./Sidebar.styles";
 
 
@@ -20,15 +21,17 @@ const Sidebar = (props) => {
     const isItemSelected = selected === item.name
 
     return (
-      <s.MenuItem 
-      key={index} 
-      font={fonts.menu} 
-      selected={isItemSelected}
-      onClick={() => handleMenuItemClick(item.name)}
-      >
-        <s.Text>{item.name}</s.Text>
-        {/* <s.Icon src={item.icon}></s.Icon> */}
-      </s.MenuItem>
+      <Link to={item.to} style={{ textDecoration: 'none' }}>
+        <s.MenuItem 
+        key={index} 
+        font={fonts.menu} 
+        selected={isItemSelected}
+        onClick={() => handleMenuItemClick(item.name)}
+        >
+          <s.Text>{item.name}</s.Text>
+          {/* <s.Icon src={item.icon}></s.Icon> */}
+        </s.MenuItem>
+      </Link>
     );
   });
 

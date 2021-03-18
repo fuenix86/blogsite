@@ -15,6 +15,7 @@ const App = () => {
       icon: "icons/project-diagram.svg",
       subMenuItems: [
         // in the future, linking this to Github would be cool
+        // I'll need to design what this renders first
         { name: "", to: "blogsite" },
         { name: "", to: "youtube-downloader" },
       ],
