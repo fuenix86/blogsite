@@ -2,10 +2,9 @@ import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
   width: 20%;
-  min-width: 80px;
+  min-width: 118px;
   max-width: 280px;
-  color: white;
-  background: #545454;
+  background: ${p => (p.colors.sidebarBg)};
   font-size: 2rem;
 `;
 
@@ -22,9 +21,9 @@ export const MenuItem = styled.div`
   width: ${(p) => (p.selected ? "calc(100% - 1.6rem)" : "calc(100% - 1.6rem)")};
   padding: 0.8rem;
   padding-left: ${(p) => (p.selected ? "2.3rem" : "0.8rem")};
-  color: ${(p) => (p.selected ? "#ffffff" : "#cacaca")};
-  background: ${(p) => (p.selected ? "#848484" : "#6b6b6b")};
-  font-family: ${(p) => p.font};
+  color: ${(p) => (p.selected ? p.colors.menuItemColorSelected : p.colors.menuItemColor)};
+  background: ${(p) => (p.selected ? p.colors.menuItemBgSelected : p.colors.menuItemBg)};
+  font-family: ${(p) => (p.colors.font)};
   font-weight: 500;
   justify-content: space-between;
   border-radius: ${(p) => (p.selected ? "0px 10px 10px 0px" : "none")};
@@ -34,8 +33,8 @@ export const MenuItem = styled.div`
     !p.selected &&
     `
     &:hover {
-      color: #ffffff;
-      background: #787878;
+      color: ${p.colors.menuItemColorSelected};
+      background: ${p.colors.menuItemBgHover};
     }
   `}
 `;

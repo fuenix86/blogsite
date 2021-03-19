@@ -1,5 +1,6 @@
 import React from "react";
 import * as s from "./App.styles";
+import * as Colors from "./colors";
 
 // Components
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -23,16 +24,9 @@ const App = () => {
     { name: "Blog", to: "/blog", icon: "icons/edit.svg", subMenuItems: [] },
   ];
 
-  const fonts = {
-    menu: 'Roboto'
-  }
-
   return (
     <s.App>
-      <Sidebar
-        menuItems={menuItems}
-        fonts = {fonts}
-        />
+      <Sidebar menuItems={menuItems} colors={Colors.Default} />
       <MainView />
     </s.App>
   );

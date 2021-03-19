@@ -6,8 +6,14 @@ import * as s from "./Sidebar.styles";
 const Sidebar = (props) => {
   const {
     menuItems = [],
-    fonts = {
-      menu: "",
+    colors = {
+      font: "Roboto",
+      sidebarBg: "#545454",
+      menuItemBg: "#6b6b6b",
+      menuItemBgHover: "#787878",
+      menuItemBgSelected: "#848484",
+      sidebarColor: "#cacaca",
+      sidebarColorSelected: "#ffffff",
     },
   } = props;
   
@@ -21,12 +27,12 @@ const Sidebar = (props) => {
     const isItemSelected = selected === item.name
 
     return (
-      <Link to={item.to} style={{ textDecoration: 'none' }}>
-        <s.MenuItem 
-        key={index} 
-        font={fonts.menu} 
-        selected={isItemSelected}
-        onClick={() => handleMenuItemClick(item.name)}
+      <Link to={item.to} style={{ textDecoration: "none" }}>
+        <s.MenuItem
+          key={index}
+          colors={colors}
+          selected={isItemSelected}
+          onClick={() => handleMenuItemClick(item.name)}
         >
           <s.Text>{item.name}</s.Text>
           {/* <s.Icon src={item.icon}></s.Icon> */}
@@ -37,7 +43,7 @@ const Sidebar = (props) => {
 
 
   return (
-    <s.SidebarContainer>
+    <s.SidebarContainer colors={colors}>
       <s.MenuItemContainer>{MenuItemsJSX}</s.MenuItemContainer>
     </s.SidebarContainer>
   );

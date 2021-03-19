@@ -7,6 +7,6 @@ export const MainViewContainer = styled.div`
 export const Card = styled.div`
   margin: 4rem 4rem 0;
   padding: 2rem;
-  background-color: white;
+  background: white;
   border-radius: 10px;
 `;
