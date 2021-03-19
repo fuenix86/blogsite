@@ -1,6 +1,7 @@
 import React from "react";
 import * as s from "./App.styles";
 import * as Colors from "./colors";
+import * as Transitions from "./transitions";
 
 // Components
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -27,7 +28,7 @@ const App = () => {
   return (
     <s.App>
       <Sidebar menuItems={menuItems} colors={Colors.Default} />
-      <MainView />
+      <MainView transitions={Transitions.Default} />
     </s.App>
   );
 };

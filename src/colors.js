@@ -8,5 +8,5 @@ export const Default = {
   menuItemBgSelected: "#848484",
   menuItemColor: "#cacaca",
   menuItemColorSelected: "#ffffff",
-  mainViewBg: "#ffffff",
+  mainViewBg: "rgba(255, 255, 255, 1)",
 };

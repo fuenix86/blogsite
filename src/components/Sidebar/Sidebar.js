@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as s from "./Sidebar.styles";
 
-
 const Sidebar = (props) => {
   const {
     menuItems = [],
@@ -35,7 +34,6 @@ const Sidebar = (props) => {
           onClick={() => handleMenuItemClick(item.name)}
         >
           <s.Text>{item.name}</s.Text>
-          {/* <s.Icon src={item.icon}></s.Icon> */}
         </s.MenuItem>
       </Link>
     );
@@ -45,6 +43,10 @@ const Sidebar = (props) => {
   return (
     <s.SidebarContainer colors={colors}>
       <s.MenuItemContainer>{MenuItemsJSX}</s.MenuItemContainer>
+      <s.MenuItemStatic colors={colors}>
+        <s.Icon src="icons/feather-alt.svg"></s.Icon>
+        Blogsite
+      </s.MenuItemStatic>
     </s.SidebarContainer>
   );
 };

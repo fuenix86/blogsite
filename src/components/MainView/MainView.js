@@ -3,9 +3,13 @@ import * as s from "./MainView.styles";
 import Routes from "../../Routes";
 
 const MainView = (props) => {
+  const { transitions = {} } = props;
+
+  console.log(transitions);
+
   return (
     <s.MainViewContainer>
-      <Routes />
+      <Routes transitions={transitions} />
     </s.MainViewContainer>
   );
 };

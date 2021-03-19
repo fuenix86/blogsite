@@ -1,11 +1,15 @@
 import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
+  display: flex;
   width: 20%;
   min-width: 118px;
   max-width: 280px;
-  background: ${p => (p.colors.sidebarBg)};
+  background: ${(p) => p.colors.sidebarBg};
   font-size: 2rem;
+
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const SidebarHeader = styled.h3`
@@ -14,7 +18,7 @@ export const SidebarHeader = styled.h3`
 `;
 
 export const MenuItemContainer = styled.div`
-  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const MenuItem = styled.div`
@@ -39,10 +43,22 @@ export const MenuItem = styled.div`
   `}
 `;
 
+export const MenuItemStatic = styled.div`
+  width: calc(100% - 1.6rem);
+  padding: 0.8rem;
+  padding-left: 0.8rem;
+  color: ${(p) => p.colors.menuItemColor};
+  background: ${(p) => p.colors.menuItemBg};
+  font-family: ${(p) => p.colors.font};
+  font-weight: 500;
+  justify-content: space-between;
+`;
+
 export const Text = styled.p`
   display: inline;
 `;
 
 export const Icon = styled.img`
   height: 1.5rem;
+  padding-right: 0.2rem;
 `;
